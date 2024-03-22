@@ -11,6 +11,11 @@
         "prod": "vite build",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
+    "exports": {
+        ".": {
+            "import": "./index.js"
+        }
+    },
     "repository": {
         "type": "git",
         "url": "git+https://https://github.com/imarc/web-components.git"
