@@ -1,5 +1,5 @@
 {
-    "name": "imarc-web-componentw",
+    "name": "imarc-web-components",
     "version": "1.0.0",
     "description": "A collection of web components built with Lit.",
     "main": "index.js",
