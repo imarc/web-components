@@ -3,6 +3,27 @@ import babel from 'vite-plugin-babel'
 
 export default defineConfig(async ({ command }) => {
   const config = {
+    build: {
+      manifest: false,
+      assetsDir: '.',
+      target: 'esnext',
+      //export index.js without hash
+      rollupOptions: {
+        output: {
+          entryFileNames: '[name].js',
+          chunkFileNames: '[name].js',
+          assetFileNames: '[name].[ext]'
+        }
+      },
+      minify: false,
+      lib: {
+        entry: 'index.js',
+        formats: ['es']
+      },
+      outDir: 'dist',
+      emptyOutDir: true,
+      sourcemap: true
+    },
     plugins: [
       babel({
         babelConfig: {
